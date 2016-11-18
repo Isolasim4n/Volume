@@ -137,6 +137,11 @@ public class Volum extends javax.swing.JFrame {
         });
 
         jButton2.setText("Volume");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("cm");
@@ -256,6 +261,21 @@ public class Volum extends javax.swing.JFrame {
     private void TFjariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFjariActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFjariActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    int sisi;
+    sisi = Integer.parseInt(TFsisi.getText());
+    int Vkubus = sisi*sisi*sisi; 
+
+        try{
+            JOptionPane.showMessageDialog(null, "Volume Kubus Adalah : "+Vkubus,"luas",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }catch(Exception e){
+            JOptionPane.showConfirmDialog(null,"Error: "+e,"gagal",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
